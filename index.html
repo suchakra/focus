@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="date-time" id="dateTime"></div>
+    <div class="container">
+        <div class="goal-column">
+            <div class="goal-section">
+                <h2>Annual Goals</h2>
+                <ul id="annualGoals" class="goal-list"></ul>
+                <button onclick="addGoal('annualGoals')">Add Goal</button>
+                <div id="annualGoalsStats" class="stats"></div>
+            </div>
+
+            <div class="goal-section">
+                <h2>Monthly Goals</h2>
+                <ul id="monthlyGoals" class="goal-list"></ul>
+                <button onclick="addGoal('monthlyGoals')">Add Goal</button>
+                <div id="monthlyGoalsStats" class="stats"></div>
+            </div>
+        </div>
+
+        <div class="goal-column">
+            <div class="goal-section">
+                <h2>Daily Goals</h2>
+                <ul id="dailyGoals" class="goal-list"></ul>
+                <button onclick="addGoal('dailyGoals')">Add Goal</button>
+                <div id="dailyGoalsStats" class="stats"></div>
+            </div>
+
+            <div class="goal-section">
+                <h2>Weekly Goals</h2>
+                <ul id="weeklyGoals" class="goal-list"></ul>
+                <button onclick="addGoal('weeklyGoals')">Add Goal</button>
+                <div id="weeklyGoalsStats" class="stats"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="goalModal">
+        <h2>Edit Goal</h2>
+        <label for="goalTitle">Goal Title:</label>
+        <input type="text" id="goalTitle" placeholder="Edit goal title">
+        <label for="goalDescription">Description:</label>
+        <textarea id="goalDescription" placeholder="Add description here..."></textarea>
+        <label for="goalResults">Results:</label>
+        <textarea id="goalResults" placeholder="Add results here..."></textarea>
+        <div class="button-container">
+            <button onclick="saveGoalEdit()">Save</button>
+            <button class="delete-button" onclick="deleteGoal()">Delete</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="secrets.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
